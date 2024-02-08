@@ -1,0 +1,22 @@
+<!-- result_template.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <script>
+        window.onload = function() {
+            var message = "{{ message }}";
+            alert(message);
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting back...</p>
+    <script>
+        setTimeout(function() {
+            window.location.href = "{% url 'SpamDetector' %}";  
+        }, 2000);  
+    </script>
+</body>
+</html>
